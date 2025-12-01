@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background: rgb(0, 0, 0); 
+  min-height: 100vh;
+  font-family: Montserrat;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+    display: grid;
+    place-content: center;
+    justify-items: center;
+}
+
+h1,
+p,
+h2 {
+    color: white;
+    text-align: center;
+}
+
+img {
+    border: solid 5px;
+    border-color: rgb(30, 255, 0);
+    border-radius: 200px;
+}
+
+.box,
+.box2,
+.box3,
+.box4 {
+    margin: 5%;
+    width: 230px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    --border-angle: 0turn;
+    animation-play-state: paused;
+    border: solid 5px transparent;
+    border-radius: 2em;
+    background:
+        var(--main-bg) padding-box,
+        var(--gradient-border) border-box,
+        var(--main-bg) border-box;
+    background-position: center center;
+}
+
+.box {
+    --main-bg: conic-gradient(from var(--border-angle),
+            rgb(17, 51, 44),
+            rgb(17, 33, 34) 5%,
+            rgb(17, 33, 34) 60%,
+            rgb(17, 51, 44) 95%);
+    --gradient-border: conic-gradient(from var(--border-angle),
+            transparent 25%,
+            rgb(2, 97, 57),
+            rgb(1, 202, 125) 99%,
+            transparent);
+}
+
+.box img,
+.box2 img, 
+.box3 img, 
+.box4 img {
+    border: none;
+    max-height: 30px;
+    padding-right: 10px;
+    pointer-events: none;
+}
+
+.box:hover,
+.box2:hover,
+.box3:hover,
+.box4:hover {
+    animation: bg-spin 3s linear infinite;
+}
+
+.box2 {
+    --main-bg: conic-gradient(from var(--border-angle),
+            rgb(1, 50, 95),
+            rgb(4, 17, 34) 5%,
+            rgb(4, 17, 34) 60%,
+            rgb(1, 50, 95) 95%);
+    --gradient-border: conic-gradient(from var(--border-angle),
+            transparent 25%,
+            rgb(0, 132, 255),
+            rgb(0, 132, 255) 99%,
+            transparent);
+}
+
+.box3 {
+    --main-bg: conic-gradient(from var(--border-angle),
+            rgb(17, 17, 17),
+            rgb(22, 22, 22) 5%,
+            rgb(22, 22, 22) 60%,
+            rgb(17, 17, 17) 95%);
+    --gradient-border: conic-gradient(from var(--border-angle),
+            transparent 25%,
+            rgb(0, 160, 253),
+            rgb(202, 1, 158) 99%,
+            transparent);
+}
+
+.box4 {
+    --main-bg: conic-gradient(from var(--border-angle),
+            rgb(17, 51, 44),
+            rgb(17, 33, 34) 5%,
+            rgb(17, 33, 34) 60%,
+            rgb(17, 51, 44) 95%);
+    --gradient-border: conic-gradient(from var(--border-angle),
+            transparent 25%,
+            rgb(2, 97, 57),
+            rgb(1, 202, 125) 99%,
+            transparent);
+}
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+ul {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+    display: flex;
+    color: white;
+    text-decoration: none;
+
+}
+
+.footer{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 500;
+    margin-top: auto;
+    
+}
+.footer p{
+    color: rgb(0, 0, 0);
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;     
+  user-select: none;         
+  -webkit-tap-highlight-color: transparent;
+}
