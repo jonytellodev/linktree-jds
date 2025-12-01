@@ -108,14 +108,14 @@ img {
 
 .box4 {
     --main-bg: conic-gradient(from var(--border-angle),
-            rgb(17, 51, 44),
-            rgb(17, 33, 34) 5%,
-            rgb(17, 33, 34) 60%,
-            rgb(17, 51, 44) 95%);
+            #2e1515,
+            #1a0d0d 5%,
+            #1a0d0d 60%,
+            #2e1515 95%);
     --gradient-border: conic-gradient(from var(--border-angle),
             transparent 25%,
-            rgb(2, 97, 57),
-            rgb(1, 202, 125) 99%,
+            #ffdf9e,
+            #e56969 99%,
             transparent);
 }
 
