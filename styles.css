@@ -161,3 +161,12 @@ a {
   user-select: none;         
   -webkit-tap-highlight-color: transparent;
 }
+
+@media (max-width: 600px) {
+  .box:hover,
+  .box2:hover,
+  .box3:hover,
+  .box4:hover {
+    animation: bg-spin 6s linear infinite; /* más lenta y menos carga */
+  }
+}
